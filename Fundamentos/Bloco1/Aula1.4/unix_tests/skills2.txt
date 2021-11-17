@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Firefox
+VScode
+NodeJS
+Python
+Porta
