@@ -1,12 +1,12 @@
-let patientId = 50;
-let isEnrolled = true;
-const patientInfo = {
-  firstName: 'Ana',
-  lastName: 'Santos',
-};
-const patientEmail = 'ana@email.com';
+const a = 10;
+const b = 3;
 
-console.log(typeof patientId);
-console.log(typeof isEnrolled);
-console.log(typeof patientEmail);
-console.log(typeof patientInfo);
+if(a > b){
+  console.log(a);
+}
+else if(b > a){
+  console.log(b);
+}
+else{
+  console.log(a);
+}

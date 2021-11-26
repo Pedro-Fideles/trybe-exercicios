@@ -1,9 +1,16 @@
-const base = 5;
-let height = 8;
-const area = base * height;
-const perimeter = (2 * base) + (2 * height);
+const a = 10;
+const b = 5;
+const c = 15;
 
-console.log(base);
-console.log(height);
-console.log(area);
-console.log(perimeter);
+if(a >= b && a > c){
+    console.log(a);
+}
+else if (b > a && b >= c){
+    console.log(b);
+}
+else if (c >= a && c > b){
+    console.log(c);
+}
+else {
+    console.log(a);
+}
