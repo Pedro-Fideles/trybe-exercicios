@@ -1,16 +1,11 @@
-let situacao = "aprovada";
+const anguloA = 60;
+const anguloB = 60;
+const anguloC = 60;
 
-switch (situacao) {
-    case 'aprovada':
-        console.log('Aprovada(o)');
-        break;
-    case 'lista':
-        console.log('Lista de Espera');
-        break;
-    case 'reprovada':
-        console.log('Reprovada(o)');
-    default:
-        console.log('não se aplica');
-        break;
-
+if (anguloA <= 0 || anguloB <= 0 || anguloC <= 0){
+    console.log('Um angulo tem o valor inválido');
+} else if (anguloA + anguloB + anguloC == 180) {
+    console.log(true);
+} else {
+    console.log(false);
 }
