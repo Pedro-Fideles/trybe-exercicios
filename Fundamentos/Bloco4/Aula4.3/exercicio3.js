@@ -1,11 +1,11 @@
 let number = 5;
 let mensagem;
 
-for(let i = 1; i <= 5; i += 1){
+for(let i = 1; i <= number; i += 1){
 
     mensagem = ""
 
-    for(let n = 5; n > i; n -= 1){
+    for(let n = number; n > i; n -= 1){
         mensagem = mensagem + " ";
     }
 
