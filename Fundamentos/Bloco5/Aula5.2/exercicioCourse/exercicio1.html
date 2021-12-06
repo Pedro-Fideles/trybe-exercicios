@@ -38,6 +38,16 @@
       filho.innerText = "oi, eu sou o filho!";
 
       ondeEuEstou.appendChild(filho);
+
+      let primeiroFilhoDoFilho = ondeEuEstou.firstElementChild;
+
+      let filhoDoFilhoDoFilho = document.createElement('section');
+      filhoDoFilhoDoFilho.innerText = "oi, eu sou o filho do filho do filho!";
+
+
+      primeiroFilhoDoFilho.appendChild(filhoDoFilhoDoFilho);
+
+      console.log(filhoDoFilhoDoFilho.parentElement.parentElement.nextElementSibling);
     </script>
   </body>
 </html>
