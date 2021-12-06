@@ -48,6 +48,19 @@
       primeiroFilhoDoFilho.appendChild(filhoDoFilhoDoFilho);
 
       console.log(filhoDoFilhoDoFilho.parentElement.parentElement.nextElementSibling);
+
+      let removeItem = [];
+      removeItem[0] = document.querySelector("#primeiroFilho");
+      removeItem[1] = document.querySelector("#terceiroFilho");
+      removeItem[2] = document.querySelector("#quartoEUltimoFilho");
+
+      let pai = document.querySelector("#pai");
+
+      for (let item of removeItem){
+        pai.removeChild(item);
+      }
+      ondeEuEstou.removeChild(document.querySelector("#segundoEUltimoFilhoDoFilho"));
+      
     </script>
   </body>
 </html>
