@@ -28,6 +28,16 @@
 
       let terceiroFilho = ondeEuEstou.nextElementSibling;
       terceiroFilho = document.querySelector("#pai").lastElementChild.previousElementSibling;
+
+      let irmao = document.createElement('section');
+      irmao.innerText = "oi, eu sou o irmão!";
+
+      document.querySelector('#pai').appendChild(irmao);
+
+      let filho = document.createElement('section');
+      filho.innerText = "oi, eu sou o filho!";
+
+      ondeEuEstou.appendChild(filho);
     </script>
   </body>
 </html>
