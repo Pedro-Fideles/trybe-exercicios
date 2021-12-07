@@ -61,6 +61,7 @@
 
       let h1 = document.createElement('h1');
       h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+      h1.className = 'title';
       body.appendChild(h1);
 
       let mainContent = document.createElement('main');
@@ -91,6 +92,23 @@
       let list = document.createElement('ul');
       list.innerHTML = '<li>Um</li><li>Dois</li><li>Três</li><li>Quatro</li><li>Cinco</li><li>Seis</li><li>Sete</li><li>Oito</li><li>Nove</li><li>Dez</li>';
       rightContent.appendChild(list);
+
+      for (let i = 0; i < 3; i += 1) {
+        let subTitle = document.createElement('h3');
+        subTitle.className = 'description';
+        
+        mainContent.appendChild(subTitle);
+      }
+
+      mainContent.removeChild(leftContent);
+
+      rightContent.style.marginRight = 'auto';
+
+      centerContent.parentElement.style.backgroundColor = 'green';
+
+      let itemList = document.querySelectorAll('ul li');
+      list.removeChild(itemList[9]);
+      list.removeChild(itemList[8]);
     </script>
   </body>
 </html>
