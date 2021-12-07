@@ -13,10 +13,8 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
 const li = document.querySelectorAll('ul li');
-console.log(li);
 for(let item of li){
     item.addEventListener('click', classTech);
-    console.log(item);
 }
 // para saber remover uma classe olhei o artigo https://backefront.com.br/como-remover-classe-javascript-puro/ 
 function classTech(event) {
@@ -29,6 +27,18 @@ function classTech(event) {
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+// Para resolver esse exercício usei como referência: 
+// https://developer.mozilla.org/pt-BR/docs/Web/Events
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/compositionupdate_event
+
+input.value.addEventListener('compositionstart', atualizarTexto());
+input.value.addEventListener('compositionupdate', atualizarTexto());
+input.value.addEventListener('compositionend', atualizarTexto());
+
+function atualizarTexto() {
+    console.log(input.value);
+    document.getElementsByClassName('tech').innerText = input.value;
+}
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
