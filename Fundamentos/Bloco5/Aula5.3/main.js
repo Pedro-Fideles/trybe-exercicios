@@ -29,15 +29,13 @@ function classTech(event) {
 // com a classe 'tech';
 // Para resolver esse exercício usei como referência: 
 // https://developer.mozilla.org/pt-BR/docs/Web/Events
-// https://developer.mozilla.org/en-US/docs/Web/API/Element/compositionupdate_event
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
 
-input.value.addEventListener('compositionstart', atualizarTexto());
-input.value.addEventListener('compositionupdate', atualizarTexto());
-input.value.addEventListener('compositionend', atualizarTexto());
+input.addEventListener('input', atualizarTexto());
 
-function atualizarTexto() {
-    console.log(input.value);
-    document.getElementsByClassName('tech').innerText = input.value;
+function atualizarTexto(event) {
+    console.log('oi');
+    firstLi.textContent = event.target.value;
 }
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
