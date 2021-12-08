@@ -33,9 +33,9 @@ function classTech(event) {
 
 input.addEventListener('input', atualizarTexto());
 
-function atualizarTexto(event) {
+function atualizarTexto() {
     console.log('oi');
-    firstLi.textContent = event.target.value;
+    //firstLi.textContent = ;
 }
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
