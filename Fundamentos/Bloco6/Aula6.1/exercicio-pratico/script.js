@@ -1,5 +1,5 @@
 // Variáveis e Seletores
-const estado = document.getElementById('estado');
+const selecionaEstado = document.getElementById('estado');
 
 const estados = [
     {
@@ -113,6 +113,18 @@ const estados = [
 ]
 
 // Funções
-function gerarEstados(estados) {
-    
+function gerarEstados(estados, elementoPai) {
+    for(estado of estados){
+        let criarEstado = document.createElement('option');
+        criarEstado.innerText = estado['nome'];
+        criarEstado.value = estado['sigla'];
+
+        elementoPai.appendChild(criarEstado);
+    }
 }
+
+// Comandos
+gerarEstados(estados, selecionaEstado);
+
+console.log(selecionaEstado);
+console.log(estados[2]['nome']);
