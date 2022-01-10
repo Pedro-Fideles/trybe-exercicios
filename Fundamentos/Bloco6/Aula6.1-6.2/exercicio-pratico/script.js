@@ -1,5 +1,6 @@
 // Variáveis e Seletores
 const selecionaEstado = document.getElementById('estado');
+const botaoForm = document.getElementById('enviar-form');
 
 const estados = [
     {
@@ -123,8 +124,10 @@ function gerarEstados(estados, elementoPai) {
     }
 }
 
+function enviaForm (event) {
+    event.preventDefault();
+}
+
 // Comandos
 gerarEstados(estados, selecionaEstado);
-
-console.log(selecionaEstado);
-console.log(estados[2]['nome']);
+botaoForm.addEventListener('click', enviaForm)
