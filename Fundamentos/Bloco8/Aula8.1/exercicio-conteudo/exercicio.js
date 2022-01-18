@@ -1,14 +1,6 @@
-const manha = () => {
-  return 'Acordando!!';
-}
-
-const fome = () => {
-  return 'Bora tomar café!!'
-}
-
-const noite = () => {
-  return 'Partiu dormir!!'
-}
+const manha = () => 'Acordando!!';
+const fome = () => 'Bora tomar café!!';
+const noite = () => 'Partiu dormir!!';
 
 const doingThing = (mensagem) => {
   console.log(mensagem());
