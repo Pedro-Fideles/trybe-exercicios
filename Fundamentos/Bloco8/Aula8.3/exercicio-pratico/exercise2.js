@@ -62,3 +62,10 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+function nameAndAge(arrayBooks) {
+  const arrayNameAndAge = arrayBooks.map((book) => ({ age: book.releaseYear - book.author.birthYear, author: book.author.name}));
+  arrayNameAndAge.sort((author1, author2) => author1.age - author2.age);
+  return arrayNameAndAge; 
+}
+
+console.log(nameAndAge(books));
