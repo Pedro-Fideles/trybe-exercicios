@@ -5,7 +5,7 @@ class Pokemon extends Component {
     const { name, type, averageWeight, image } = this.props.dataPokemon;
 
     return(
-      <section>
+      <section className='item-pokemon'>
         <section>
           <p>{name}</p>
           <p>{type}</p>

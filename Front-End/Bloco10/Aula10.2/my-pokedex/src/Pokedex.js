@@ -4,7 +4,7 @@ import pokemons from "./data";
 
 class Pokedex extends Component {
   render() {
-    return (pokemons.map((pokemon) => <Pokemon dataPokemon={pokemon}/>));
+    return (pokemons.map((pokemon) => <Pokemon dataPokemon={pokemon} key={pokemon.id} />));
   }
 }
 
