@@ -7,7 +7,7 @@ class Pokemon extends Component {
 
     return(
       <section className='item-pokemon'>
-        <section>
+        <section className='info-pokemon'>
           <p>{name}</p>
           <p>{type}</p>
           <p>Avarage weight: {averageWeight.value} {averageWeight.measurementUnit}</p>
@@ -22,10 +22,13 @@ class Pokemon extends Component {
 
 Pokemon.propTypes = {
   dataPokemon: PropTypes.shape({
-    name: PropTypes.string,
-    type: PropTypes.string,
-    averageWeight: PropTypes,
-    image: PropTypes.string
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    averageWeight: PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      measurementUnit: PropTypes.string.isRequired
+    }),
+    image: PropTypes.string.isRequired
   })
 }
 
